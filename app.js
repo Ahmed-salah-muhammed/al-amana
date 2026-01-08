@@ -7,6 +7,8 @@ let total = document.getElementById("total");
 let count = document.getElementById("count");
 let category = document.getElementById("category");
 let create = document.getElementById("create");
+let date = document.getElementById("date");
+
 
 // =================== TOAST SYSTEM (DARK STYLE) ===================
 const notifications = document.getElementById("notifications");
@@ -350,3 +352,8 @@ searchInput.onkeyup = function () {
     }
   }
 };
+
+date.innerHTML = `© ${new Date().getFullYear()} Ahmed Salah AbdEl-bari - All rights reserved.`;
+
+
+//  }
