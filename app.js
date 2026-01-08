@@ -86,7 +86,7 @@ function getTotal() {
     total.classList.add("bg-emerald-600/20", "text-emerald-400", "border-emerald-500/50");
     total.classList.remove("bg-red-900/30", "text-red-400", "border-gray-700");
   } else {
-    total.innerHTML = "L.E";
+    total.innerHTML = "جنيهًا";
     total.classList.remove("bg-emerald-600/20", "text-emerald-400", "border-emerald-500/50");
     total.classList.add("bg-red-900/30", "text-red-400", "border-gray-700");
   }
@@ -152,7 +152,7 @@ function cleaninputs() {
   taxes.value = "";
   ads.value = "";
   discount.value = "";
-  total.innerHTML = "L.E";
+  total.innerHTML = "جنيهًا";
   count.value = "";
   category.value = "";
   getTotal();
@@ -170,8 +170,8 @@ function readData(data = dataPro) {
         <td class="px-6 py-4">
           <span class="px-2.5 py-1 text-[10px] font-bold uppercase rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20">${dataPro[i].category}</span>
         </td>
-        <td class="px-6 py-4 text-gray-300">${dataPro[i].price} <span class="text-[10px] text-gray-600">L.E</span></td>
-        <td class="px-6 py-4 text-red-400/80">${dataPro[i].discount} <span class="text-[10px] text-gray-600">L.E</span></td>
+        <td class="px-6 py-4 text-gray-300">${dataPro[i].price} <span class="text-[10px] text-gray-600">جنيهًا</span></td>
+        <td class="px-6 py-4 text-red-400/80">${dataPro[i].discount} <span class="text-[10px] text-gray-600">جنيهًا</span></td>
         <td class="px-6 py-4 text-emerald-400 font-bold">${dataPro[i].total}</td>
         <td class="px-6 py-4">
           <div class="flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
@@ -291,7 +291,7 @@ function saveProduct(i, source = "desktop") {
 
   product.price = priceValue;
   product.discount = discountValue;
-  product.total = `${product.price - product.discount} L.E`;
+  product.total = `${product.price - product.discount} جنيهًا`;
 
   localStorage.setItem("product", JSON.stringify(dataPro));
   readData();
